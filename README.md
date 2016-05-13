@@ -30,7 +30,7 @@ The methods currently available are:
 ## How to use it
 This plugin can be used as a blueprint for your own plugin, or you can edit the methods and add code to respond to each event.
 
-## Example onWfFileSystemAfterUpload method
+### Example onWfFileSystemAfterUpload method
 
 This method would respond to an upload event, and resize the image using the Joomla JImage class.
 
@@ -44,6 +44,19 @@ public function onWfFileSystemAfterUpload($path, $state) {
     $image->resize(800, 600, false)->toFile($path);
     // destroy handle
     $image->destroy();
+  }
+}
+```
+### Example on onWfFileSystemCreateFolder method
+
+This method would respond to a folder create, and add an htaccess file to the folder.
+
+```php
+public function onWfFileSystemCreateFolder($path, $state) {
+  // create folder was a success
+  if ($state) {
+    $data = "order allow deny\rdeny from all\rallow from 127.0.0.1";
+    file_put_contents($path . '/.htaccess', $data);
   }
 }
 ```
