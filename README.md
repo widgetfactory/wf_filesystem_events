@@ -26,6 +26,8 @@ The events currently available are:
 * onWfFileSystemAfterMove
 * onWfFileSystemBeforeUpload
 * onWfFileSystemAfterUpload
+* onWfFileSystemBeforeWrite
+* onWfFileSystemAfterWrite
 
 ## How to use it
 This plugin can be used as a blueprint for your own plugin, or you can edit the methods and add code to respond to each event.
