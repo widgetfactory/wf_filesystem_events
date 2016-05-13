@@ -12,7 +12,7 @@ https://docs.joomla.org/Installing_an_extension
 ## What it does
 This plugin provides a sample of JPlugin event methods for responding to JCE Filesystem Events.
 
-The methods currently available are:
+The events currently available are:
 
 * onWfFileSystemGetRootDir
 * onWfFileSystemBeforeDelete
