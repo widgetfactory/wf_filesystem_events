@@ -22,7 +22,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   string  $path  The relative root directory path, eg: "images".
 	 * @return  void
 	 */
-    public function onWfFileSystemGetRootDir($path) {
+    public function onWfFileSystemGetRootDir(&$path) {
     }
     
 	/**
@@ -31,7 +31,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   string  $path  The absolute file/folder path.
 	 * @return  void
 	 */
-    public function onWfFileSystemBeforeDelete($path) {
+    public function onWfFileSystemBeforeDelete(&$path) {
     }
 	
 	/**
@@ -41,7 +41,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemAfterDelete($path, $state) {
+    public function onWfFileSystemAfterDelete(&$result) {
     }
 	
 	/**
@@ -51,17 +51,17 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemCreateFolder($path, $state) {
+    public function onWfFileSystemCreateFolder(&$result) {
     }
 	
 	/**
 	 * onWfFileSystemBeforeRename
 	 * The file paths before the rename operation.
-	 * @param   string  $src  The absolute path of the source file.
-	 * @param   string  $dest The name of the destination file.
+	 * @param   string  $source  The absolute path of the source file.
+	 * @param   string  $destination The name of the destination file.
 	 * @return  void
 	 */
-    public function onWfFileSystemBeforeRename($src, $dest) {
+    public function onWfFileSystemBeforeRename(&$source, &$destination) {
     }
 	
 	/**
@@ -71,17 +71,17 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemAfterRename($path, $state) {
+    public function onWfFileSystemAfterRename(&$result) {
     }
     
     /**
 	 * onWfFileSystemBeforeCopy
 	 * The file paths before the copy operation.
-	 * @param   string  $src  The absolute path of the source file.
-	 * @param   string  $dest The absolute path of the destination file.
+	 * @param   string  $source  The absolute path of the source file.
+	 * @param   string  $destination The absolute path of the destination file.
 	 * @return  void
 	 */
-    public function onWfFileSystemBeforeCopy($src, $dest) {    	
+    public function onWfFileSystemBeforeCopy(&$source, &$destination) {    	
     }
 	
 	/**
@@ -91,17 +91,17 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemAfterCopy($path, $state) {    	
+    public function onWfFileSystemAfterCopy(&$result) {    	
     }
     
     /**
 	 * onWfFileSystemBeforeMove
 	 * The file paths before the move operation.
-	 * @param   string  $src  The absolute path of the source file.
-	 * @param   string  $dest The absolute path of the destination file.
+	 * @param   string  $source  The absolute path of the source file.
+	 * @param   string  $destination The absolute path of the destination file.
 	 * @return  void
 	 */
-    public function onWfFileSystemBeforeMove($src, $dest) {    	
+    public function onWfFileSystemBeforeMove(&$source, &$destination) {    	
     }
 	
 	/**
@@ -111,17 +111,17 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemAfterMove($path, $state) {    	
+    public function onWfFileSystemAfterMove(&$result) {    	
     }
 	
 	/**
 	 * onWfFileSystemBeforeUpload
 	 * The file paths before the upload operation.
-	 * @param   string  $src  The absolute path of the upload temp file.
-	 * @param   string  $dest The absolute destination path of the uploaded file.
+	 * @param   string  $source  The absolute path of the upload temp file.
+	 * @param   string  $destination The absolute destination path of the uploaded file.
 	 * @return  void
 	 */
-    public function onWfFileSystemBeforeUpload($src, $dest) {
+    public function onWfFileSystemBeforeUpload(&$source, &$destination) {
     }
 	
 	/**
@@ -131,7 +131,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemAfterUpload($path, $state) {
+    public function onWfFileSystemAfterUpload(&$result) {
     }
     
     /**
@@ -141,16 +141,16 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 * @param   boolean  $content  The content to be written to the file.
 	 * @return  void
 	 */
-    public function onWfFileSystemBeforeWrite($path, $content) {
+    public function onWfFileSystemBeforeWrite(&$path, &$content) {
     }
     
     /**
 	 * onWfFileSystemAfterWrite
 	 * The absolute file path after the write operation.
 	 * @param   string  $path  The absolute file path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   boolean $state  The result state of the operation.
 	 * @return  void
 	 */
-    public function onWfFileSystemAfterWrite($path, $state) {
+    public function onWfFileSystemAfterWrite(&$path, $state) {
     }
 }
