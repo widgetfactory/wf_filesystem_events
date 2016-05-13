@@ -37,8 +37,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	/**
 	 * onWfFileSystemAfterDelete
 	 * The absolute file/folder path after the delete operation.
-	 * @param   string  $path  The absolute file/folder path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   object  $result  The result object containing path and state.
 	 * @return  void
 	 */
     public function onWfFileSystemAfterDelete(&$result) {
@@ -47,8 +46,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	/**
 	 * onWfFileSystemCreateFolder
 	 * The absolute folder path after the create folder operation.
-	 * @param   string  $path  The absolute folder path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   object  $result  The result object containing path and state.
 	 * @return  void
 	 */
     public function onWfFileSystemCreateFolder(&$result) {
@@ -67,8 +65,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	/**
 	 * onWfFileSystemAfterDelete
 	 * The absolute file/folder path after the delete operation.
-	 * @param   string  $path  The absolute file/folder path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   object  $result  The result object containing path and state.
 	 * @return  void
 	 */
     public function onWfFileSystemAfterRename(&$result) {
@@ -87,8 +84,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	/**
 	 * onWfFileSystemAfterDelete
 	 * The absolute file/folder path after the delete operation.
-	 * @param   string  $path  The absolute file/folder path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   object  $result  The result object containing path and state.
 	 * @return  void
 	 */
     public function onWfFileSystemAfterCopy(&$result) {    	
@@ -107,8 +103,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	/**
 	 * onWfFileSystemAfterMove
 	 * The absolute file path after the move operation.
-	 * @param   string  $path  The absolute file path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   object  $result  The result object containing path and state.
 	 * @return  void
 	 */
     public function onWfFileSystemAfterMove(&$result) {    	
@@ -127,8 +122,7 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	/**
 	 * onWfFileSystemAfterUpload
 	 * The absolute file path after the upload operation.
-	 * @param   string  $path  The absolute file path.
-	 * @param   boolean  $state  The result state of the operation.
+	 * @param   object  $result  The result object containing path and state.
 	 * @return  void
 	 */
     public function onWfFileSystemAfterUpload(&$result) {
