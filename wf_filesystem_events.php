@@ -133,4 +133,24 @@ class PlgSystemWf_filesystem_events extends JPlugin {
 	 */
     public function onWfFileSystemAfterUpload($path, $state) {
     }
+    
+    /**
+	 * onWfFileSystemBeforeWrite
+	 * The absolute file path before the write operation.
+	 * @param   string  $path  The absolute file path.
+	 * @param   boolean  $content  The content to be written to the file.
+	 * @return  void
+	 */
+    public function onWfFileSystemBeforeWrite($path, $content) {
+    }
+    
+    /**
+	 * onWfFileSystemAfterWrite
+	 * The absolute file path after the write operation.
+	 * @param   string  $path  The absolute file path.
+	 * @param   boolean  $state  The result state of the operation.
+	 * @return  void
+	 */
+    public function onWfFileSystemAfterWrite($path, $state) {
+    }
 }
