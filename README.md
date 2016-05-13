@@ -41,7 +41,7 @@ public function onWfFileSystemAfterUpload($path, $state) {
   // upload was a success
   if ($state) {
     jimport('joomla.image.image');
-    $image = new JImage($path;
+    $image = new JImage($path);
     // resize image to 800 x 600
     $image->resize(800, 600, false)->toFile($path);
   }
