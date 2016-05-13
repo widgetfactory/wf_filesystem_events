@@ -44,6 +44,8 @@ public function onWfFileSystemAfterUpload($path, $state) {
     $image = new JImage($path);
     // resize image to 800 x 600
     $image->resize(800, 600, false)->toFile($path);
+    // destroy handle
+    $image->destroy();
   }
 }
 ```
