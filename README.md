@@ -28,13 +28,11 @@ The methods currently available are:
 * onWfFileSystemAfterUpload
 
 ## How to use it
-Once installed, remember to enable the plugin.
-
 This plugin can be used as a blueprint for your own plugin, or you can edit the methods and add code to respond to each event.
 
 ## Example onWfFileSystemAfterUpload method
 
-This method would respond to an upload event, and resize the image using Joomla JImage class.
+This method would respond to an upload event, and resize the image using the Joomla JImage class.
 
 ```php
 public function onWfFileSystemAfterUpload($path, $state) {
