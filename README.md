@@ -37,13 +37,13 @@ This plugin can be used as a blueprint for your own plugin, or you can edit the 
 This method would respond to an upload event, and resize the image using the Joomla JImage class.
 
 ```php
-public function onWfFileSystemAfterUpload($path, $state) {
+public function onWfFileSystemAfterUpload(&$result) {
   // upload was a success
-  if ($state) {
+  if ($result->state) {
     jimport('joomla.image.image');
-    $image = new JImage($path);
+    $image = new JImage($result->path);
     // resize image to fit 800 x 600
-    $image->resize(800, 600, false)->toFile($path);
+    $image->resize(800, 600, false)->toFile($result->path);
     // destroy handle
     $image->destroy();
   }
