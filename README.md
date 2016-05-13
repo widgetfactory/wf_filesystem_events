@@ -47,7 +47,7 @@ public function onWfFileSystemAfterUpload($path, $state) {
   }
 }
 ```
-### Example on onWfFileSystemCreateFolder method
+### Example onWfFileSystemCreateFolder method
 
 This method would respond to a folder create, and add an htaccess file to the folder.
 
