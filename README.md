@@ -62,3 +62,20 @@ public function onWfFileSystemCreateFolder($path, $state) {
   }
 }
 ```
+
+### Example onWfFileSystemGetRootDir method
+
+This method would use a speficic folder when performing an inline (drag & drop) upload.
+
+```php
+public function onWfFileSystemGetRootDir(&$root)
+{
+    if (JFactory::getApplication()->input->getInt('inline', 0) === 1) {
+      $year = date('Y');
+      $month = date('m');
+      $day = date('d');
+            
+      $root = 'images/uploads/' . $year;
+    }
+}
+```
