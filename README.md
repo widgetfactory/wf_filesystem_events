@@ -65,7 +65,7 @@ public function onWfFileSystemCreateFolder($path, $state) {
 
 ### Example onWfFileSystemGetRootDir method
 
-This method would use a speficic folder when performing an inline (drag & drop) upload.
+This method will use a speficic folder when performing an inline (drag & drop) upload.
 
 ```php
 public function onWfFileSystemGetRootDir(&$root)
