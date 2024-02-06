@@ -70,7 +70,8 @@ class PlgSystemWf_filesystem_events extends CMSPlugin
     /**
      * onWfFileSystemCreateFolder
      * The absolute folder path after the create folder operation.
-     * @param   object  $result  The result object containing path and state.
+     * @param   string  $path  The created folder absolute path.
+	 * @param   boolean $state The action state, eg: true | false.
      * @return  void
      */
     public function onWfFileSystemCreateFolder($path, $state)
