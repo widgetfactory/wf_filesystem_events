@@ -63,7 +63,7 @@ class PlgSystemWf_filesystem_events extends CMSPlugin
      * @param   object  $result  The result object containing path and state.
      * @return  void
      */
-    public function onWfFileSystemAfterDelete(&$result)
+    public function onWfFileSystemAfterDelete(&$path, $state)
     {
     }
 
@@ -73,7 +73,7 @@ class PlgSystemWf_filesystem_events extends CMSPlugin
      * @param   object  $result  The result object containing path and state.
      * @return  void
      */
-    public function onWfFileSystemCreateFolder(&$result)
+    public function onWfFileSystemCreateFolder($path, $state)
     {
     }
 
