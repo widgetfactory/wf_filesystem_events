@@ -4,18 +4,20 @@
  * @package     JCE
  * @subpackage  System.wf_filesystem_events
  *
- * @copyright   Copyright (C) 2016 Ryan Demmer. All rights reserved.
+ * @copyright   Copyright (C) 2016 - 2024 Ryan Demmer. All rights reserved.
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later
  */
 defined('JPATH_BASE') or die;
+
+use Joomla\CMS\Plugin\CMSPlugin;
 
 /**
  * @package     JCE
  * @subpackage  System.wf_filesystem_events
  * @since       2.6
  */
-class PlgSystemWf_filesystem_events extends JPlugin {
+class PlgSystemWf_filesystem_events extends CMSPlugin {
 	
 	/**
 	 * onWfFileSystemGetRootDir
