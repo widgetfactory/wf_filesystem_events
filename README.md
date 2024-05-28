@@ -14,6 +14,7 @@ This plugin provides a sample of JPlugin event methods for responding to JCE Fil
 
 The events currently available are:
 
+* onWfFileSystemBeforeGetPathVariables
 * onWfFileSystemGetPathVariables
 * onWfFileSystemBeforeGetRootDir
 * onWfFileSystemGetRootDir
