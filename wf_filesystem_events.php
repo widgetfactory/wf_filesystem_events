@@ -19,7 +19,15 @@ use Joomla\CMS\Plugin\CMSPlugin;
  */
 class PlgSystemWf_filesystem_events extends CMSPlugin
 {
-
+    /**
+     * onWfFileSystemBeforeGetPathVariables
+     * @param   string  $path_replacement  Key / value pairs of path replacement values, eg: 'usertype' : 'Author'
+     * @return  void
+     */
+    public function onWfFileSystemBeforeGetPathVariables(&$path_replacement)
+    {
+    }
+	
     /**
      * onWfFileSystemGetPathVariables
      * @param   string  $variables  Key / value pair of path variables
